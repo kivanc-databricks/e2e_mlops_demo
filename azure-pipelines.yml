@@ -1,3 +1,6 @@
+variables:
+  - group: 'DatabricksVariables'
+
 trigger:
   branches:
     include:
@@ -8,7 +11,6 @@ stages:
   condition: |
     and(
       not(startsWith(variables['Build.SourceBranch'], 'refs/heads/releases')),
-      not(startsWith(variables['Build.SourceBranch'], 'refs/heads/main')),
       not(startsWith(variables['Build.SourceBranch'], 'refs/tags/v'))
     )
   jobs:
