@@ -14,7 +14,7 @@ stages:
   jobs:
   - job: onPushJob
     pool:
-      vmImage: 'ubuntu-18.04'
+      vmImage: 'ubuntu-20.04'
     steps:
     - script: env | sort
       displayName: 'Environment / Context'
@@ -69,7 +69,7 @@ stages:
   jobs:
   - job: onReleaseJob
     pool:
-      vmImage: 'ubuntu-18.04'
+      vmImage: 'ubuntu-20.04'
 
     steps:
       - script: env | sort
