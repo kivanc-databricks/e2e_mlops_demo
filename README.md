@@ -24,10 +24,10 @@ The following pipelines currently defined within the package are:
     - Load a model from MLflow Model Registry, load features from Feature Store and score batch.
 
 ## Demo
-The following outlines the workflow to demo the repo.
+The following outlines the workflow to demo the repo. This project is based on https://github.com/niall-turbitt/e2e-mlops-azure
 
 ### Set up
-1. Fork https://github.com/niall-turbitt/e2e-mlops-azure
+1. Fork https://github.com/kivanc-databricks/e2e_mlops_demo
 1. Configure [Databricks CLI connection profile](https://docs.databricks.com/dev-tools/cli/index.html#connection-profiles)
     - The project is designed to use 3 different Databricks CLI connection profiles: dev, staging and prod. 
       These profiles are set in [e2e-mlops-azure/.dbx/project.json](https://github.com/niall-turbitt/e2e-mlops-azure/blob/main/.dbx/project.json).
@@ -36,13 +36,13 @@ The following outlines the workflow to demo the repo.
     - This [project.json](https://github.com/niall-turbitt/e2e-mlops-azure/blob/main/.dbx/project.json) file will have to be 
       adjusted accordingly to the connection profiles a user has configured on their local machine.
 1. Configure Databricks the following variables for use in the Azure DevOps pipelines:
-        - `DATABRICKS_STAGING_HOST`
+        - `STAGING_DATABRICKS_HOST`
             - URL of Databricks staging workspace
-        - `DATABRICKS_STAGING_TOKEN`
+        - `STAGING_DATABRICKS_TOKEN`
             - [Databricks access token](https://docs.databricks.com/dev-tools/api/latest/authentication.html) for staging workspace
-        - `DATABRICKS_PROD_HOST`
+        - `PROD_DATABRICKS_HOST`
             - URL of Databricks production workspace
-        - `DATABRICKS_PROD_TOKEN`
+        - `PROD_DATABRICKS_TOKEN`
             - [Databricks access token](https://docs.databricks.com/dev-tools/api/latest/authentication.html) for production workspace
 
     #### ASIDE: Starting from scratch
